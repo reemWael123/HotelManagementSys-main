@@ -1,0 +1,296 @@
+{
+  "BUTTONS": {
+    "REGISTER": "Register",
+    "LOGIN": "Login",
+    "LOGIN_NOW": "Login Now",
+    "EXPLORE": "Explore",
+    "LOGOUT": "Logout",
+    "CHANGE_PASSWORD": "Change password",
+    "PROFILE": "Profile",
+    "SEND": "Send",
+    "RATE": "Rate",
+    "CONTINUE_BOOK": "Continue Book",
+    "BACK_TO_HOME": "Back to home",
+    "CANCEL": "Cancel"
+  },
+  "NAVBAR": {
+    "HOME": "Home",
+    "EXPLORE": "Explore",
+    "REVIEWS": "Reviews",
+    "FAVORITES": "Favorites"
+  },
+  "LANDING_PAGE": {
+    "BANNER_TITLE_LINE_1": "Forget Busy Work,",
+    "BANNER_TITLE_LINE_2": "Start Next Vacation",
+    "BANNER_DESCRIPTION_LINE_1": "We provide what you need to enjoy your holiday with family.",
+    "BANNER_DESCRIPTION_LINE_2": "Time to make another memorable moments.",
+    "START_BOOKING": "Start Booking",
+    "PICK_DATE": "Pick a Date",
+    "CAPACITY": "Capacity",
+    "PERSON": "person"
+  },
+  "reviews": {
+    "happyFamily": "Happy Family",
+    "rating1": 5,
+    "userName1": "John, Software Engineer",
+    "review1": "Amazing experience! I loved every moment and will definitely be back!",
+    "rating2": 4,
+    "userName2": "Jane, Marketing Specialist",
+    "review2": "Great service and beautiful location. Highly recommended!",
+    "rating3": 3,
+    "userName3": "Angga, Product Designer",
+    "review3": "What a great trip with my family and I should try again next time soon ...",
+    "rating4": 2,
+    "userName4": "Michael, Project Manager",
+    "review4": "It was okay, but there were some issues with the booking process.",
+    "rating5": 4,
+    "userName5": "Sarah, UX Designer",
+    "review5": "One of the best trips ever! Everything was well organized and enjoyable."
+  },
+  "footer": {
+    "subTitle": "We kaboom your beauty holiday instantly and memorable.",
+    "forBeginners": "For Beginners",
+    "newAccount": "New Account",
+    "startBooking": "Start Booking a Room",
+    "usePayments": "Use Payments",
+    "exploreUs": "Explore Us",
+    "ourCareers": "Our Careers",
+    "privacy": "Privacy",
+    "termsConditions": "Terms & Conditions",
+    "connectUs": "Connect Us",
+    "support": "support staycation.id",
+    "phone": "021 - 2208 - 1996",
+    "address": "Staycation, Kemang, Jakarta",
+    "copyright": "Copyright 2024 • All rights reserved • Staycation"
+  },
+  "ads": "Most popular ads",
+  "backyard": "Houses with beauty backyard",
+  "living rooms": "Houses with large living rooms",
+  "rooms": [
+    {
+      "name": "Hotel Nile View",
+      "location": "Cairo, Egypt",
+      "image": "../../../../assets/images/New folder (2)/pic (1).png"
+    },
+    {
+      "name": "The Royal Pyramid",
+      "location": "Giza, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (2).png"
+    },
+    {
+      "name": "Desert Sands Resort",
+      "location": "Luxor, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (4).png"
+    },
+    {
+      "name": "Red Sea Breeze",
+      "location": "Hurghada, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (7).png"
+    },
+    {
+      "name": "Oasis Hotel",
+      "location": "Alexandria, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (8).png"
+    },
+    {
+      "name": "Pharaoh's Palace",
+      "location": "Cairo, Egypt",
+      "image": "../../../../assets/images/New folder (2)/pic (9).png"
+    },
+    {
+      "name": "Temple View Hotel",
+      "location": "Aswan, Egypt",
+      "image": "../../../../assets/images/New folder (2)/pic (10).png"
+    },
+    {
+      "name": "Sphinx Suites",
+      "location": "Giza, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (12).png"
+    },
+    {
+      "name": "Blue Nile Inn",
+      "location": "Cairo, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (13).png"
+    },
+    {
+      "name": "Mediterranean Breeze",
+      "location": "Alexandria, Egypt",
+      "image": "../.../../../../../assets/images/New folder (14)/pic.png"
+    },
+    {
+      "name": "Luxor Grand Hotel",
+      "location": "Luxor, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (15).png"
+    },
+    {
+      "name": "Sharm Paradise Resort",
+      "location": "Sharm El-Sheikh, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (16).png"
+    },
+    {
+      "name": "Cairo Sunset Hotel",
+      "location": "Cairo, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (17).png"
+    },
+    {
+      "name": "Ancient Sands Resort",
+      "location": "Hurghada, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (18).png"
+    },
+    {
+      "name": "Pyramid Peak Inn",
+      "location": "Giza, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (19).png"
+    },
+    {
+      "name": "The Nile Palace",
+      "location": "Cairo, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (1).png"
+    },
+    {
+      "name": "Horizon Nile View",
+      "location": "Aswan, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (2).png"
+    },
+    {
+      "name": "The Alexandria Inn",
+      "location": "Alexandria, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (4).png"
+    },
+    {
+      "name": "Golden Sands Hotel",
+      "location": "Hurghada, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (7).png"
+    },
+    {
+      "name": "Cairo Sky Suites",
+      "location": "Cairo, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (8).png"
+    },
+    {
+      "name": "Sahara Oasis Resort",
+      "location": "Luxor, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (9).png"
+    },
+    {
+      "name": "The Royal Pharaoh",
+      "location": "Giza, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (10).png"
+    },
+    {
+      "name": "The Blue Pyramid",
+      "location": "Cairo, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (12).png"
+    },
+    {
+      "name": "Tahrir Square Hotel",
+      "location": "Cairo, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (13).png"
+    },
+    {
+      "name": "Golden Nile Suites",
+      "location": "Aswan, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (14).png"
+    },
+    {
+      "name": "Mediterranean Sands Resort",
+      "location": "Alexandria, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (15).png"
+    },
+    {
+      "name": "Sharm Blue Bay",
+      "location": "Sharm El-Sheikh, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (16).png"
+    },
+    {
+      "name": "Luxor Horizon",
+      "location": "Luxor, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (17).png"
+    },
+    {
+      "name": "Pyramid Valley Resort",
+      "location": "Giza, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (19).png"
+    },
+    {
+      "name": "Red Sea Horizon",
+      "location": "Hurghada, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (2).png"
+    },
+    {
+      "name": "The Grand Nile",
+      "location": "Cairo, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (1).png"
+    },
+    {
+      "name": "Temple Sands Hotel",
+      "location": "Aswan, Egypt",
+      "image": "../.../../../../../assets/images/New folder (4)/pic (2).png"
+    },
+    {
+      "name": "The Mediterranean Pearl",
+      "location": "Alexandria, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (10).png"
+    },
+    {
+      "name": "Giza Heights Resort",
+      "location": "Giza, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (12).png"
+    },
+    {
+      "name": "The Pharaoh's Retreat",
+      "location": "Cairo, Egypt",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (15).png"
+    }
+  ],
+  "sub tittel": "per night",
+  "Most popular": "Most popular",
+  "ROOM_DETAILS_REVIEWS": {
+    "REVIEWS": "Reviews",
+    "ADD_REVIEW_PLACEHOLDER": "message"
+  },
+  "ROOM_DETAILS_COMMENTS": {
+    "COMMENTS": "Comments",
+    "ADD_COMMENT": "Add your comment",
+    "ADD_COMMENT_PLACEHOLDER": "message"
+  },
+  "ROOM_DETAILS_BOOKING": {
+    "PER_NIGHT": "per night",
+    "DISCOUNT": "Discount"
+  },
+  "FAVORITES": {
+    "FAVORITES_LIST_TITLE": "Your Favorite Room"
+  },
+  "ERROR_MESSAGES": {
+    "ERROR_TITLE": "Error",
+    "LOGIN_FIRST": "Please login first"
+  },
+  "SUCCESS_MESSAGES": {
+    "SUCCESS_TITLE": "Success",
+    "ADD_REVIEW_SUCCESS": "Thank you for your review",
+    "ADD_COMMENT_SUCCESS": "Thank you for your comment",
+    "DELETE_COMMENT_SUCCESS": "Comment is deleted successfully"
+  },
+  "PAYMENT": {
+    "title":"Payment",
+    "subTitle":"Kindly follow the instructions below",
+    "enterData":"Enter Data",
+    "dataValid": "Data Valid",
+    "completed": "Completed",
+    "tax": "Tax",
+    "subTotal": "Sub total",
+    "total": "Total",
+    "transfer":"Transfer Pembayaran",
+    "bankCentralAsia": "Bank Central Asia",
+    "accountNumber": "2208 1996",
+    "buildWithAngga": "BuildWith Angga",
+    "bankMandiri": "Bank Mandiri",
+    "SUCCESS_PAYMENT_TITLE": "Yay! Completed",
+    "SUCCESS_PAYMENT_DESC_LINE_1": "We will inform you via email later",
+    "SUCCESS_PAYMENT_DESC_LINE_2": "once the transaction has been accepted"
+  },
+  "explore": {
+    "exploreALLRooms": "Explore ALL Rooms",
+    "allRoom": "All Room"
+  }
+}

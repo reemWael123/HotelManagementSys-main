@@ -1,0 +1,23 @@
+<section>
+  <div class="row mx-0 overflow-hidden">
+    <div
+      class="p-0"
+      [ngClass]="{
+        'col-1': isToggle,
+        'col-2': !isToggle
+      }"
+    >
+      <app-sidebar (toggle)="receiveToggle($event)"></app-sidebar>
+    </div>
+    <div
+      class="px-4 py-3"
+      [ngClass]="{
+        'col-11': isToggle,
+        'col-10': !isToggle
+      }"
+    >
+      <app-navbar></app-navbar>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>

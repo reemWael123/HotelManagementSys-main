@@ -1,0 +1,24 @@
+<section
+  class="bg-secondary-color side-bar overflow-y-auto pt-5 position-relative"
+>
+  <div
+    class="position-absolute toggle bg-main-color second-color d-flex align-items-center justify-content-center pointer"
+    (click)="sendData()"
+  >
+    <i *ngIf="!toggler" class="pi pi-angle-left"></i>
+    <i *ngIf="toggler" class="pi pi-angle-right"></i>
+  </div>
+  <div class="menu">
+    <ng-container *ngFor="let item of menu">
+      <a
+        class="item py-3 px-4"
+        [class]="toggler ? 'justify-content-center' : null"
+        [routerLink]="item.link"
+        routerLinkActive="active"
+      >
+        <i class="pi {{ item.icon }}"></i>
+        <span *ngIf="!toggler">{{ item.title }}</span>
+      </a>
+    </ng-container>
+  </div>
+</section>

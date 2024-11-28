@@ -1,0 +1,11 @@
+<app-table-header title="Bookings"></app-table-header>
+
+<app-table
+  [columns]="columns"
+  [data]="bookingList"
+  [paginator]="paginator"
+  [totalRecords]="totalRecords"
+  [footerKey]="footerKey"
+  (viewEmitter)="onView($event)"
+  (deleteEmitter)="onDelete($event)"
+></app-table>

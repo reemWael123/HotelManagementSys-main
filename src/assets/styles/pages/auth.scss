@@ -1,0 +1,57 @@
+.auth {
+  background-color: var(--bg-main-color);
+  color: var(--default-color);
+  padding: 30px;
+  min-height: 100vh;
+  margin-inline: auto;
+
+  a,
+  label {
+    color: var(--ternary-color) !important;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  small {
+    position: absolute;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .auth {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .auth {
+    padding-inline: 10px;
+    width: 100%;
+  }
+}
+
+.login-back {
+  background: url(../../images/auth/login.png) no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.register-back {
+  background: url(../../images/auth/sign-up.png) no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.forget-reset-back {
+  background: url(../../images/auth/forget-reset.png) no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}

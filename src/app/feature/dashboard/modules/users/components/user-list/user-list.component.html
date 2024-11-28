@@ -1,0 +1,10 @@
+<app-table-header title="Users Table Details"></app-table-header>
+
+<app-table
+  [columns]="columns"
+  [data]="userList"
+  [paginator]="paginator"
+  [totalRecords]="totalRecords"
+  [footerKey]="footerKey"
+  (viewEmitter)="onView($event)"
+></app-table>

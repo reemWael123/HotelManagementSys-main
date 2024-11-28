@@ -1,0 +1,44 @@
+<section>
+  <div class="container">
+    <div class="row gap-lg-3 gap-5">
+      <div class="col-md-4">
+        <img
+          class="w-100"
+          src="../../../../../assets/images/landing/foto_keluarga.png"
+        />
+      </div>
+
+      <div class="col-md-6 d-flex flex-column gap-5 justify-content-center">
+        <p-carousel
+          [value]="data"
+          [numVisible]="1"
+          [numScroll]="1"
+          [circular]="true"
+          orientation="horizontal"
+          [responsiveOptions]="responsiveOptions"
+          [autoplayInterval]="3000"
+          [style]="{ height: '100%' }"
+        >
+          <ng-template let-item pTemplate="item">
+            <div class="product-item">
+              <div class="product-item-content">
+                <div class="d-flex flex-column gap-3 px-4">
+                  <h2 class="mb-md-5 mb-3">
+                    {{ "reviews.happyFamily" | translate }}
+                  </h2>
+                  <h4 class="mb-1">{{ item.review }}</h4>
+                  <p-rating
+                    [(ngModel)]="item.rating"
+                    [readonly]="true"
+                    [cancel]="false"
+                  ></p-rating>
+                  <p class="gray-color">{{ item.userName }}</p>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+    </div>
+  </div>
+</section>

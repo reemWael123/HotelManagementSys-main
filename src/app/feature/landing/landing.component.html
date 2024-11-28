@@ -1,0 +1,11 @@
+<app-anonymous-navbar
+  *ngIf="isAnonymousUser; else loggedInUser"
+></app-anonymous-navbar>
+
+<ng-template #loggedInUser>
+  <app-user-navbar></app-user-navbar>
+</ng-template>
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>

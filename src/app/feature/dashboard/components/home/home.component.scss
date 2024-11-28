@@ -1,0 +1,17 @@
+.card {
+  background: var(--bg-secondary-color);
+  color: #fff;
+  border-radius: 15px;
+  padding-inline: 20px;
+  height: 150px;
+
+  .icon {
+    background: var(--bg-icon-color);
+    color: var(--bg-secondary-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="container mt-5 w-75">
+  <div class="tittel text-center">
+    <h1 class="text-center main-color mb-4">
+      {{ "PAYMENT.SUCCESS_PAYMENT_TITLE" | translate }}
+    </h1>
+    <img src="../../../../../../assets/images/global/success-payment.svg" />
+    <p class="text-center stable-text">
+      {{ "PAYMENT.SUCCESS_PAYMENT_DESC_LINE_1" | translate }} <br />
+      {{ "PAYMENT.SUCCESS_PAYMENT_DESC_LINE_2" | translate }}
+    </p>
+
+    <p-button
+      [label]="'BUTTONS.BACK_TO_HOME' | translate"
+      class="btn-main mt-3"
+      type="submit"
+      routerLinkActive="active"
+      routerLink="/landing"
+      [routerLinkActiveOptions]="{ exact: true }"
+    ></p-button>
+  </div>
+</div>

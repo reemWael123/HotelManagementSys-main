@@ -1,0 +1,36 @@
+<form class="d-flex flex-column gap-3">
+  <div class="d-flex flex-column">
+    <label>Name</label>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      pInputText
+      name="facility-name"
+      aria-describedby="facility-name-help"
+      placeholder="Enter facility name"
+      required
+      #facilityInput="ngModel"
+    />
+    <div
+      id="facility-name-help"
+      *ngIf="facilityInput.touched && facilityInput.invalid"
+      class="position-relative error-text"
+    >
+      <small>Facility name is required</small>
+    </div>
+  </div>
+
+  <p-divider class="mt-3"></p-divider>
+
+  <div class="d-flex mb-3 justify-content-end align-items-center">
+    <button
+      label="Save"
+      pButton
+      pRipple
+      class="p-button-success p-button"
+      type="button"
+      [disabled]="!name"
+      (click)="submit()"
+    ></button>
+  </div>
+</form>

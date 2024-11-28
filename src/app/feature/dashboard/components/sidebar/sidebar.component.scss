@@ -1,0 +1,42 @@
+.side-bar {
+  min-height: 100vh;
+  height: 100%;
+
+  .toggle {
+    width: 25px;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    top: 10px;
+    right: 0;
+    color: var(--secondary-color);
+    background-color: var(--bg-navbar-color);
+  }
+
+  .menu {
+    .item {
+      color: var(--sidebar-color) !important;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        background-color: var(--li-hover);
+        color: var(--sidebar-color) !important;
+        text-decoration: none !important;
+      }
+    }
+
+    .active {
+      background-color: var(--li-hover);
+      color: var(--sidebar-color) !important;
+    }
+
+    .pi {
+      font-size: 1.2rem !important;
+    }
+  }
+
+}

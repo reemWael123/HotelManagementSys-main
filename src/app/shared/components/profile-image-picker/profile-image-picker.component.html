@@ -1,0 +1,36 @@
+<p-fileUpload
+  name="demo[]"
+  [customUpload]="true"
+  [multiple]="false"
+  accept="image/*"
+  [maxFileSize]="1000000"
+  [showUploadButton]="false"
+  [showCancelButton]="false"
+  chooseIcon="pi pi-user"
+  [chooseLabel]="''"
+  (onSelect)="uploadImage($event)"
+  [chooseStyleClass]="'choose-button'"
+  class="profile-image-picker"
+  [styleClass]="
+    profileImage ? 'uploaded-image-container' : 'empty-image-container'
+  "
+>
+  <ng-template pTemplate="file">
+    <div class="text-center">
+      <!-- Image Preview -->
+      <p-image
+        [src]="profileImage?.objectURL?.changingThisBreaksApplicationSecurity"
+        alt="Image"
+        width="70"
+        height="70"
+        imageClass="rounded-circle"
+        [preview]="true"
+      >
+        <ng-template pTemplate="indicator">
+          <i (click)="removeImage($event)" class="px-1 pi pi-trash"></i>
+          <i class="px-1 pi pi-eye"></i>
+        </ng-template>
+      </p-image>
+    </div>
+  </ng-template>
+</p-fileUpload>

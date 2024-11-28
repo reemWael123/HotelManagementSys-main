@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row pt-5 justify-content-center">
+    <div class="col-12">
+      <h2 class="text-center ternary-color mb-5">
+        {{ "explore.exploreALLRooms" | translate }}
+      </h2>
+      <p-breadcrumb
+        class="max-w-full"
+        [model]="items"
+        [home]="home"
+      ></p-breadcrumb>
+      <h5 class="ternary-color mt-5 mb-4">
+        {{ "explore.allRoom" | translate }}
+      </h5>
+      <div class="row m-0 p-0 mb-5">
+        <app-landing-card
+          class="col-md-4 mx-0 rounded-4 mb-4"
+          *ngFor="let room of roomsList"
+          [badgeTitle]="'$' + room.price + ' ' + ('sub tittel' | translate)"
+          [images]="room.images"
+          [name]="room.roomNumber"
+          [isFloatedFooter]="true"
+          [id]="room._id"
+        ></app-landing-card>
+      </div>
+      <p-paginator
+        (onPageChange)="onPageChange($event)"
+        [first]="first"
+        [rows]="rows"
+        [totalRecords]="roomData ? roomData.data.totalCount : 0"
+        [rowsPerPageOptions]="[6, 15, 30, 50]"
+      ></p-paginator>
+    </div>
+  </div>
+</div>

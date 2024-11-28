@@ -1,0 +1,16 @@
+::ng-deep .p-carousel-content {
+  gap: 4rem;
+}
+
+::ng-deep .p-icon.p-rating-icon.p-rating-icon-active {
+  color: #FFCC47;
+}
+
+::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+  background-color: #FFCC47;
+}
+
+.ltr-carousel {
+  direction: ltr;
+  text-align: end;
+}

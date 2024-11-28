@@ -1,0 +1,165 @@
+<div
+  class="row mx-0 justify-content-center align-items-center dashboard-page-form"
+>
+  <form class="col-md-8 d-flex flex-column gap-3" [formGroup]="roomForm">
+    <div class="d-flex flex-column">
+      <label>Room Number</label>
+      <input
+        type="text"
+        formControlName="roomNumber"
+        pInputText
+        aria-describedby="room-number-help"
+        placeholder="Enter room number"
+      />
+      <div
+        id="room-number-help"
+        *ngIf="
+          roomForm.controls.roomNumber.touched &&
+          roomForm.controls.roomNumber.errors
+        "
+        class="position-relative error-text"
+      >
+        <small *ngIf="roomForm.controls.roomNumber.errors?.['required']"
+          >Room number is required</small
+        >
+      </div>
+    </div>
+
+    <div class="row mx-0">
+      <div class="col-md-6 ps-md-0 d-flex flex-column">
+        <label>Price</label>
+        <input
+          type="text"
+          pInputText
+          aria-describedby="price-help"
+          placeholder="Enter price"
+          formControlName="price"
+        />
+        <div
+          id="price-help"
+          *ngIf="
+            roomForm.controls.price.touched && roomForm.controls.price.errors
+          "
+          class="position-relative error-text"
+        >
+          <small *ngIf="roomForm.controls.price.errors?.['required']"
+            >Price is required</small
+          >
+        </div>
+      </div>
+
+      <div class="col-md-6 pe-md-0 d-flex flex-column">
+        <label>Capacity</label>
+        <input
+          type="text"
+          pInputText
+          aria-describedby="capacity-help"
+          formControlName="capacity"
+          placeholder="Enter capacity"
+        />
+
+        <div
+          id="capacity-help"
+          *ngIf="
+            roomForm.controls.capacity.touched &&
+            roomForm.controls.capacity.errors
+          "
+          class="position-relative error-text"
+        >
+          <small *ngIf="roomForm.controls.capacity.errors?.['required']"
+            >Capacity is required</small
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="row mx-0">
+      <div class="col-md-6 ps-md-0 d-flex flex-column">
+        <label>Discount</label>
+        <input
+          type="text"
+          pInputText
+          aria-describedby="discount-help"
+          placeholder="Enter discount"
+          formControlName="discount"
+        />
+
+        <div
+          id="discount-help"
+          *ngIf="
+            roomForm.controls.discount.touched &&
+            roomForm.controls.discount.errors
+          "
+          class="position-relative error-text"
+        >
+          <small *ngIf="roomForm.controls.discount.errors?.['required']"
+            >Discount is required</small
+          >
+        </div>
+      </div>
+
+      <div class="col-md-6 pe-md-0 d-flex flex-column">
+        <label>Facilities</label>
+        <p-multiSelect
+          class="w-100"
+          placeholder="Choose facilities"
+          [options]="facilitiesDropDown"
+          optionLabel="name"
+          optionValue="_id"
+          formControlName="facilities"
+          [style]="{ width: '100%' }"
+          [panelStyle]="{ width: '100%' }"
+        ></p-multiSelect>
+
+        <div
+          id="discount-help"
+          *ngIf="
+            roomForm.controls.facilities.touched &&
+            roomForm.controls.facilities.errors
+          "
+          class="position-relative error-text"
+        >
+          <small *ngIf="roomForm.controls.facilities.errors?.['required']"
+            >Facilities is required</small
+          >
+        </div>
+      </div>
+    </div>
+
+    <ng-container *ngIf="mode">
+      <app-image-picker
+        [initialImages]="initialImages"
+        [multiple]="multipleImages"
+        [name]="'Room'"
+        [fileLimit]="imagesLimit"
+        [isView]="mode === 'view' ? true : false"
+        (imagesEmitter)="updateImages($event)"
+      ></app-image-picker>
+    </ng-container>
+
+    <p-divider class="mt-5"></p-divider>
+
+    <div
+      class="row mx-0 mb-3 justify-content-end align-items-center"
+      *ngIf="mode !== 'view'"
+    >
+      <button
+        pButton
+        pRipple
+        label="Cancel"
+        [loading]="loading"
+        class="p-button-outlined p-button-sm p-button-danger col-md-3 me-2"
+        type="button"
+        (click)="cancel()"
+      ></button>
+      <button
+        label="Save"
+        pButton
+        pRipple
+        class="p-button-success p-button col-md-2"
+        type="button"
+        (click)="submit()"
+      ></button>
+    </div>
+  </form>
+</div>

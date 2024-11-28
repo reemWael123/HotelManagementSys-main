@@ -1,0 +1,32 @@
+:root.theme-switch {
+  --default-color: #fff;
+  --main-color: #fff;
+  --secondary-color: #4a90e2;
+  --ternary-color: #495cad;
+  --gray-color: #999;
+  --yellow-color: #dfcb1d;
+
+  --bg-main-color: #121212;
+  --bg-secondary-color: #1f2a48;
+  --bg-gray-color: #242424;
+  --bg-paginator: #202020;
+  --bg-icon-color: rgba(74, 144, 226, 0.2);
+  --text-gray-color: white;
+  --sidebar-color: white;
+}
+
+// body {
+//   color: #fff !important;
+// }
+
+// .p-paginator .p-paginator-pages .p-paginator-page.p-highlight,
+// .p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
+//   background-color: var(--gray-color) !important;
+//   color: var(--main-color) !important;
+// }
+
+// .p-inputtext:enabled:focus,
+// .p-calendar:not(.p-calendar-disabled).p-focus > .p-inputtext,
+// .p-button:focus {
+//   box-shadow: 0 0 0 1px #ffffff !important;
+// }

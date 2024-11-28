@@ -1,0 +1,21 @@
+// ::ng-deep .p-datatable.p-datatable-sm .p-datatable-thead > tr > th,
+// ::ng-deep p-datatable.p-datatable-sm .p-datatable-tbody > tr > td {
+//   padding: 1rem !important;
+// }
+
+td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  // width: 130px;
+}
+
+// Actions
+.actions {
+  display: flex;
+
+  button {
+    width: 35px !important;
+    height: 35px !important;
+  }
+}

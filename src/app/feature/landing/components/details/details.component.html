@@ -1,0 +1,100 @@
+<section>
+  <div class="container">
+    <h2 class="mt-5 ternary-color">
+      {{ listroomdetails?.data?.room.roomNumber }}
+    </h2>
+    <div class="d-flex justify-content-center m-5">
+      <div class="card w-100 overflow-hidden">
+        <p-galleria
+          [value]="images"
+          [responsiveOptions]="responsiveOptions"
+          [containerStyle]="{ 'max-width': '100%' }"
+          [numVisible]="5"
+        >
+          <ng-template pTemplate="item" let-item>
+            <img
+              [src]="item"
+              style="
+                width: 100%;
+                height: auto;
+                max-height: 500px;
+              "
+            />
+          </ng-template>
+
+          <ng-template pTemplate="thumbnail" let-item>
+            <div class="grid grid-nogutter justify-content-center">
+              <img
+                [src]="item"
+                style="width: 60px; height: 60px; object-fit: cover"
+              />
+            </div>
+          </ng-template>
+        </p-galleria>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="text mt-2 stable-text">
+          <p class="stable-text">
+            Minimal techno is a minimalist subgenre of techno music. It is
+            characterized by a stripped-down aesthetic that exploits the use of
+            repetition and understated development. Minimal techno is thought to
+            have been originally developed in the early 1990s by Detroit-based
+            producers Robert Hood and Daniel Bell.
+          </p>
+          <p>
+            Such trends saw the demise of the soul-infused techno that typified
+            the original Detroit sound. Robert Hood has noted that he and Daniel
+            Bell both realized something was missing from techno in the
+            post-rave era.
+          </p>
+          <p>
+            Design is a plan or specification for the construction of an object
+            or system or for the implementation of an activity or process, or
+            the result of that plan or specification in the form of a prototype,
+            product or process. The national agency for design: enabling
+            Singapore to use design for economic growth and to make lives
+            better.
+          </p>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-3" *ngFor="let item of facilities">
+            <i
+              [class]="getFacilityIcon(item.name) + ' px-0'"
+              style="font-size: 2rem; color: var(--ternary-color)"
+            ></i>
+            <span class="stable-text d-block">{{ item.name }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div
+          class="card details-card p-5 rounded-3"
+          *ngIf="listroomdetails?.data?.room"
+        >
+          <app-book-room-in-details
+            [room]="listroomdetails?.data?.room"
+          ></app-book-room-in-details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container py-5">
+  <div class="py-5 reviews-comments-container rounded-3">
+    <div class="row justify-content-center mx-0">
+      <div class="col-md-5">
+        <app-room-reviews [roomId]="pageid"></app-room-reviews>
+      </div>
+      <div class="col-md-1">
+        <p-divider layout="vertical"></p-divider>
+      </div>
+      <div class="col-md-5">
+        <app-room-comments [roomId]="pageid"></app-room-comments>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+<form #adsForm="ngForm" class="d-flex flex-column gap-3">
+  <div class="d-flex flex-column" *ngIf="data.text === 'add'">
+    <label>Room</label>
+    <p-dropdown
+      class="w-100"
+      placeholder="Choose room"
+      [options]="facilitiesDropDown"
+      optionLabel="roomNumber"
+      optionValue="_id"
+      [style]="{ width: '100%' }"
+      [panelStyle]="{ width: '100%' }"
+      [(ngModel)]="room"
+      #roomInput="ngModel"
+      name="room"
+      [required]="true"
+    ></p-dropdown>
+    <div
+      *ngIf="roomInput.touched && roomInput.invalid"
+      class="position-relative error-text"
+    >
+      <small>Room is required</small>
+    </div>
+  </div>
+
+  <div class="d-flex flex-column">
+    <label>Discount</label>
+    <input
+      type="text"
+      pInputText
+      aria-describedby="discount-help"
+      placeholder="Enter discount"
+      [(ngModel)]="discount"
+      #discountInput="ngModel"
+      name="discount"
+      required
+      [disabled]="data.text === 'view'"
+    />
+    <div
+      *ngIf="discountInput.touched && discountInput.errors"
+      class="position-relative error-text"
+    >
+      <small>Discount is required</small>
+    </div>
+  </div>
+
+  <div class="d-flex flex-column">
+    <label>Status</label>
+    <p-dropdown
+      class="w-100"
+      placeholder="Choose status"
+      [options]="statusDropDown"
+      optionLabel="name"
+      optionValue="id"
+      [style]="{ width: '100%' }"
+      [panelStyle]="{ width: '100%' }"
+      [(ngModel)]="isActive"
+      #statusInput="ngModel"
+      name="isActive"
+      [required]="true"
+      [disabled]="data.text === 'view'"
+    ></p-dropdown>
+    <div
+      *ngIf="statusInput.touched && statusInput.invalid"
+      class="position-relative error-text"
+    >
+      <small>Status is required</small>
+    </div>
+  </div>
+
+  <p-divider></p-divider>
+  <div
+    class="d-flex justify-content-end align-items-center"
+    *ngIf="data.text !== 'view'"
+  >
+    <button
+      label="Save"
+      pButton
+      pRipple
+      class="btn-main p-button"
+      type="button"
+      [disabled]="adsForm.invalid"
+      (click)="submit()"
+    ></button>
+  </div>
+</form>

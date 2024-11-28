@@ -1,0 +1,75 @@
+<div class="row m-0 justify-content-lg-between justify-content-center align-items-center g-5">
+  <div class="col-lg-5 col-10 p-0">
+    <h4 class="title">
+      {{ "LANDING_PAGE.BANNER_TITLE_LINE_1" | translate }}<br />
+      {{ "LANDING_PAGE.BANNER_TITLE_LINE_2" | translate }}
+    </h4>
+    <p class="description">
+      {{ "LANDING_PAGE.BANNER_DESCRIPTION_LINE_1" | translate }} <br />
+      {{ "LANDING_PAGE.BANNER_DESCRIPTION_LINE_2" | translate }}
+    </p>
+
+    <h5>{{ "LANDING_PAGE.START_BOOKING" | translate }}</h5>
+    <form class="landing-form mt-4" #exploreData="ngForm" (ngSubmit)="sendData()">
+      <label>{{ "LANDING_PAGE.PICK_DATE" | translate }}</label>
+      <p-calendar
+        dateFormat="d M yy"
+        [(ngModel)]="rangeDates"
+        selectionMode="range"
+        [readonlyInput]="true"
+        [showIcon]="true"
+        styleClass="w-100"
+        inputStyleClass="w-100"
+        name="rangeDates"
+        [minDate]="today"
+        [required]="true"
+      ></p-calendar>
+
+      <label class="mt-4">{{ "LANDING_PAGE.CAPACITY" | translate }}</label>
+
+      <div class="p-inputgroup">
+        <button
+          type="button"
+          pButton
+          icon="pi pi-minus"
+          styleClass="p-button-success"
+          class="p-button-danger"
+          (click)="decrementCapacity()"
+        ></button>
+        <input
+          type="text"
+          pInputText
+          [(ngModel)]="capacity"
+          [placeholder]="
+            capacity + ' ' + _translate.instant('LANDING_PAGE.PERSON')
+          "
+          name="capacity"
+          required
+        />
+        <button
+          type="button"
+          pButton
+          icon="pi pi-plus"
+          class="p-button-success"
+          (click)="incrementCapacity()"
+        ></button>
+      </div>
+
+      <button
+        pButton
+        type="submit"
+        class="p-button-primary bg-secondary-color px-5 mt-4"
+      >
+        {{ "BUTTONS.EXPLORE" | translate }}
+      </button>
+    </form>
+  </div>
+  <div class="col-lg-5 col-10 p-0">
+    <div>
+      <img
+        class="w-100"
+        src="../../../../../../assets/images/landing/banner.png"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.price,
+.price-per-night {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.price {
+  color: var(--success-bg);
+  font-weight: 600;
+}
+
+.price-per-night {
+  color: var(--ternary-color);
+  font-family: Poppins-Light !important;
+  font-weight: 200 !important;
+}
+
+.discount {
+  color: #FF1612;
+  font-weight: 400W;
+}
+
+.booking-form {
+
+  ::ng-deep .p-inputtext,
+  ::ng-deep .p-button {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 38px !important;
+    text-align: center;
+  }
+}

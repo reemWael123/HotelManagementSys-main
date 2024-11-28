@@ -1,0 +1,54 @@
+<p-fileUpload
+  #fileUpload
+  id="fileUpload"
+  name="demo[]"
+  [customUpload]="true"
+  [multiple]="multiple"
+  accept="image/*"
+  [maxFileSize]="1000000"
+  [files]="images"
+  [showUploadButton]="false"
+  [showCancelButton]="false"
+  chooseIcon="pi pi-upload"
+  [customUpload]="true"
+  [chooseLabel]="''"
+  [disabled]="isView"
+  class="image-picker"
+  [styleClass]="
+    (fileUpload._files && fileUpload._files.length) || initialImages.length
+      ? 'uploaded-image-container'
+      : 'empty-image-container'
+  "
+  [chooseStyleClass]="'choose-button'"
+  [fileLimit]="fileLimit"
+  (onSelect)="uploadImage($event)"
+>
+  <ng-template pTemplate="toolbar">
+    <div class="my-3" *ngIf="images.length == 0">
+      <span class="choose-images">Choose a {{ name }} images</span> to upload
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="content">
+    <div class="row justify-content-center">
+      <p-image
+        class="col-lg-2 text-center my-1"
+        *ngFor="let image of images; let i = index; trackBy: trackByFn"
+        [src]="image?.objectURL?.changingThisBreaksApplicationSecurity"
+        alt="Image"
+        width="100"
+        height="100"
+        [preview]="true"
+      >
+        <ng-template pTemplate="indicator">
+          <i
+            *ngIf="!isView"
+            (click)="removeImage(i)"
+            class="px-1 pi pi-trash"
+          ></i>
+          <i class="px-1 pi pi-eye"></i>
+        </ng-template>
+      </p-image>
+    </div>
+  </ng-template>
+</p-fileUpload>

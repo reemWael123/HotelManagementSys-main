@@ -1,0 +1,72 @@
+.profile-image-picker ::ng-deep {
+  .p-fileupload .p-progressbar {
+    display: none;
+  }
+
+  .p-fileupload .p-fileupload-buttonbar,
+  .p-fileupload .p-fileupload-content {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .choose-button.p-fileupload-choose {
+    background-color: transparent !important;
+    color: var(--image-picker-color) !important;
+    height: 70px !important;
+    width: 70px;
+    border-radius: 50%;
+    border: 3px dashed var(--image-picker-color) !important;
+    justify-content: center;
+
+    .p-button-icon::before {
+      font-size: 25px !important;
+    }
+  }
+
+  .uploaded-image-container {
+    .p-image-preview-indicator {
+      border-radius: 50% !important;
+    }
+    .p-fileupload-buttonbar {
+      display: none;
+    }
+  }
+
+  .empty-image-container {
+    .p-fileupload-content {
+      display: none;
+    }
+  }
+
+  .p-fileupload-choose {
+    .p-button-icon {
+      margin: 0;
+    }
+
+    .p-button-label {
+      display: none;
+    }
+  }
+
+  .icons-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+
+    i {
+      background-color: transparent;
+
+      border: none;
+
+      font-size: 16px;
+
+      cursor: pointer;
+
+      color: white;
+    }
+  }
+}

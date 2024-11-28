@@ -1,0 +1,52 @@
+<section>
+  <div class="container-fluid" *ngIf="chartData">
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <div class="card">
+          <div
+            class="card-body d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <h2 class="card-title">{{ chartData.data.rooms }}</h2>
+              <p class="card-text">Rooms</p>
+            </div>
+            <span class="icon bg-light">
+              <i class="pi pi-th-large" style="font-size: 1.5rem"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div
+            class="card-body d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <h2 class="card-title">{{ chartData.data.facilities }}</h2>
+              <p class="card-text">Facilities</p>
+            </div>
+            <span class="icon bg-light">
+              <i class="pi pi-book" style="font-size: 1.5rem"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div
+            class="card-body d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <h2 class="card-title">{{ chartData.data.ads }}</h2>
+              <p class="card-text">Ads</p>
+            </div>
+            <span class="icon bg-light">
+              <i class="pi pi-calendar-minus" style="font-size: 1.5rem"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-chart [chartData]="chartData"></app-chart>
+  </div>
+</section>

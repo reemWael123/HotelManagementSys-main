@@ -1,0 +1,89 @@
+@import "../themes/light-mode.scss";
+@import "../themes/dark-mode.scss";
+@import "pages/colors.scss";
+@import "pages/auth.scss";
+@import "pages/dashboard.scss";
+@import "pages/buttons.scss";
+@import "pages/fonts.scss";
+@import "pages/inputs.scss";
+@import "pages/style-ar.scss";
+
+body {
+  margin: 0;
+  height: 100%;
+
+  font-family: Poppins !important;
+
+  background-color: var(--bg-main-color) !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Poppins-Bold !important;
+}
+
+h5,
+h6 {
+  font-family: Poppins-Medium !important;
+}
+
+.p-scrollpanel .p-scrollpanel-bar {
+  background: #203fc7;
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.fs {
+  font-size: 14px;
+}
+
+.p-breadcrumb {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.p-breadcrumb .p-menuitem-link {
+  gap: 8px;
+}
+
+.p-breadcrumb .p-breadcrumb-list {
+  padding: 0 !important;
+}
+
+.p-steps .p-steps-item.p-highlight .p-steps-number {
+  border: 2px solid;
+}
+
+.p-steps .p-steps-item .p-menuitem-link {
+  background: var(--bg-main-color);
+}
+
+.p-paginator,
+.p-dropdown,
+.p-dropdown-panel {
+  background: var(--bg-paginator) !important;
+}
+
+
+thead th{
+  padding-block: 15px;
+}

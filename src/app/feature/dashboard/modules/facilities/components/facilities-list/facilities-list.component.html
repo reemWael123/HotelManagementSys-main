@@ -1,0 +1,16 @@
+<app-table-header
+  title="Facilities"
+  buttonText="Add New Facility"
+  (addEmitter)="onAdd()"
+></app-table-header>
+
+<app-table
+  [columns]="columns"
+  [data]="facilitiesList"
+  [paginator]="paginator"
+  [totalRecords]="totalRecords"
+  [rows]="rows"
+  [footerKey]="footerKey"
+  (editEmitter)="onEdit($event)"
+  (deleteEmitter)="onDelete($event)"
+></app-table>

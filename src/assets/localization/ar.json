@@ -1,0 +1,295 @@
+{
+  "BUTTONS": {
+    "REGISTER": "تسجيل حساب",
+    "LOGIN": "تسجيل الدخول",
+    "LOGIN_NOW": "تسجيل الدخول",
+    "EXPLORE": "استكشف",
+    "LOGOUT": "الخروج",
+    "CHANGE_PASSWORD": "تغيير كلمةالسر",
+    "PROFILE": "الملف الشخصى",
+    "SEND": "ارسال",
+    "CONTINUE_BOOK": "إكمال الحجز",
+    "BACK_TO_HOME": "العودة للرئيسية",
+    "CANCEL": "إلغاء"
+  },
+  "NAVBAR": {
+    "HOME": "الرئيسية",
+    "EXPLORE": "استكشف",
+    "REVIEWS": "التقييمات",
+    "FAVORITES": "المفضلات"
+  },
+  "LANDING_PAGE": {
+    "BANNER_TITLE_LINE_1": "ارتح من زحام العمل",
+    "BANNER_TITLE_LINE_2": "و ابدأ اجازة سعيدة",
+    "BANNER_DESCRIPTION_LINE_1": "نحن نوفر لك و لاسرتك كل ما تحتاجون لقضاء اجازة سعيدة",
+    "BANNER_DESCRIPTION_LINE_2": "انه الوقت لعمل ذكريات جديدة سعيدة لا تنسى",
+    "START_BOOKING": "بدء الحجز",
+    "PICK_DATE": "اختر الفترة",
+    "CAPACITY": "السعة",
+    "PERSON": "شخص"
+  },
+  "reviews": {
+    "happyFamily": "عائلة سعيدة",
+    "rating1": 5,
+    "userName1": "جون، مهندس برمجيات",
+    "review1": "تجربة مذهلة! أحببت كل لحظة وسأعود بالتأكيد",
+    "rating2": 4,
+    "userName2": "جين، أخصائية تسويق",
+    "review2": "خدمة رائعة وموقع جميل. أنصح بشدة! ويجب أن أجربها مرة أخرى في المرة القادمة",
+    "rating3": 3,
+    "userName3": "أنغا، مصمم منتجات",
+    "review3": "يا لها من رحلة رائعة مع عائلتي ويجب أن أجربها مرة أخرى في المرة القادمة قريبًا",
+    "rating4": 2,
+    "userName4": "مايكل، مدير مشاريع",
+    "review4": "كانت جيدة، لكن كان هناك بعض المشاكل في عملية الحجز.",
+    "rating5": 4,
+    "userName5": "سارة، مصممة تجربة المستخدم",
+    "review5": "واحدة من أفضل الرحلات على الإطلاق! كل شيء كان منظمًا بشكل جيد وكان ممتعًا."
+  },
+  "footer": {
+    "subTitle": "نجعل عطلتك الجميلة فورية ولا تُنسى.",
+    "forBeginners": "للمبتدئين",
+    "newAccount": "حساب جديد",
+    "startBooking": "ابدأ حجز غرفة",
+    "usePayments": "استخدم المدفوعات",
+    "exploreUs": "اكتشفنا",
+    "ourCareers": "وظائفنا",
+    "privacy": "الخصوصية",
+    "termsConditions": "الشروط والأحكام",
+    "connectUs": "تواصل معنا",
+    "support": "الدعم staycation.id",
+    "phone": "٠٢١ - ٢٢٠٨ - ١٩٩٦",
+    "address": "كيمانج، جاكرتا ،Staycation",
+    "copyright": "حقوق النشر ٢٠٢٤ • جميع الحقوق محفوظة • Staycation"
+  },
+  "ads": "الإعلانات الأكثر شعبية",
+  "backyard": "منازل ذات حوش خلفي جميل ",
+  "living rooms": "منازل بها غرف معيشة كبيرة",
+  "rooms": [
+    {
+      "name": "فندق وجهة النيل",
+      "location": "القاهرة، مصر",
+      "image": "../../../../assets/images/New folder (2)/pic (1).png"
+    },
+    {
+      "name": "الهرم الملكي",
+      "location": "الجيزة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (2).png"
+    },
+    {
+      "name": "منتجع رمال الصحراء",
+      "location": "الأقصر، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (4).png"
+    },
+    {
+      "name": "نسيم البحر الأحمر",
+      "location": "الغردقة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (7).png"
+    },
+    {
+      "name": "فندق الواحة",
+      "location": "الإسكندرية، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (8).png"
+    },
+    {
+      "name": "قصر الفراعنة",
+      "location": "القاهرة، مصر",
+      "image": "../../../../assets/images/New folder (2)/pic (9).png"
+    },
+    {
+      "name": "فندق إطلالة المعبد",
+      "location": "أسوان، مصر",
+      "image": "../../../../assets/images/New folder (2)/pic (10).png"
+    },
+    {
+      "name": "أجنحة أبو الهول",
+      "location": "الجيزة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (12).png"
+    },
+    {
+      "name": "نزل النيل الأزرق",
+      "location": "القاهرة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (13).png"
+    },
+    {
+      "name": "نسيم البحر الأبيض المتوسط",
+      "location": "الإسكندرية، مصر",
+      "image": "../.../../../../../assets/images/New folder (14)/pic.png"
+    },
+    {
+      "name": "فندق الأقصر الكبير",
+      "location": "الأقصر، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (15).png"
+    },
+    {
+      "name": "منتجع شرم باراديس",
+      "location": "شرم الشيخ، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (16).png"
+    },
+    {
+      "name": "فندق غروب الشمس بالقاهرة",
+      "location": "القاهرة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (17).png"
+    },
+    {
+      "name": "منتجع رمال قديمة",
+      "location": "الغردقة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (18).png"
+    },
+    {
+      "name": "نزل قمة الهرم",
+      "location": "الجيزة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (19).png"
+    },
+    {
+      "name": "قصر النيل",
+      "location": "القاهرة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (1).png"
+    },
+    {
+      "name": "إطلالة النيل الأفقية",
+      "location": "أسوان، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (2).png"
+    },
+    {
+      "name": "نزل الإسكندرية",
+      "location": "الإسكندرية، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (4).png"
+    },
+    {
+      "name": "فندق الرمال الذهبية",
+      "location": "الغردقة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (7).png"
+    },
+    {
+      "name": "أجنحة سماء القاهرة",
+      "location": "القاهرة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (8).png"
+    },
+    {
+      "name": "منتجع واحة الصحراء",
+      "location": "الأقصر، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (9).png"
+    },
+    {
+      "name": "الفرعون الملكي",
+      "location": "الجيزة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (10).png"
+    },
+    {
+      "name": "الهرم الأزرق",
+      "location": "القاهرة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (12).png"
+    },
+    {
+      "name": "فندق ميدان التحرير",
+      "location": "القاهرة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (13).png"
+    },
+    {
+      "name": "أجنحة النيل الذهبية",
+      "location": "أسوان، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (14).png"
+    },
+    {
+      "name": "منتجع رمال البحر الأبيض المتوسط",
+      "location": "الإسكندرية، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (15).png"
+    },
+    {
+      "name": "خليج شرم الأزرق",
+      "location": "شرم الشيخ، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (16).png"
+    },
+    {
+      "name": "أفق الأقصر",
+      "location": "الأقصر، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (17).png"
+    },
+    {
+      "name": "منتجع وادي الهرم",
+      "location": "الجيزة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (19).png"
+    },
+    {
+      "name": "أفق البحر الأحمر",
+      "location": "الغردقة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (2).png"
+    },
+    {
+      "name": "فندق النيل الكبير",
+      "location": "القاهرة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (1).png"
+    },
+    {
+      "name": "فندق رمال المعبد",
+      "location": "أسوان، مصر",
+      "image": "../.../../../../../assets/images/New folder (4)/pic (2).png"
+    },
+    {
+      "name": "لؤلؤة البحر الأبيض المتوسط",
+      "location": "الإسكندرية، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (10).png"
+    },
+    {
+      "name": "منتجع مرتفعات الجيزة",
+      "location": "الجيزة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (12).png"
+    },
+    {
+      "name": "استراحة الفراعنة",
+      "location": "القاهرة، مصر",
+      "image": "../.../../../../../assets/images/New folder (2)/pic (15).png"
+    }
+  ],
+  "sub tittel": "في الليله",
+  "Most popular": "اكثرانتشارا",
+  "ROOM_DETAILS_REVIEWS": {
+    "REVIEWS": "التقييمات",
+    "ADD_REVIEW_PLACEHOLDER": "اترك رسالة"
+  },
+  "ROOM_DETAILS_COMMENTS": {
+    "COMMENTS": "التعليقات",
+    "ADD_COMMENT": "اضف تعليق",
+    "ADD_COMMENT_PLACEHOLDER": "تعليق"
+  },
+  "ROOM_DETAILS_BOOKING": {
+    "PER_NIGHT": "خلال ليلة",
+    "DISCOUNT": "خصم"
+  },
+  "FAVORITES": {
+    "FAVORITES_LIST_TITLE": "غرفك المفضلة"
+  },
+  "ERROR_MESSAGES": {
+    "ERROR_TITLE": "خطأ",
+    "LOGIN_FIRST": "قم أولا بتسجيل الدخول"
+  },
+  "SUCCESS_MESSAGES": {
+    "SUCCESS_TITLE": "تم بنجاح",
+    "ADD_REVIEW_SUCCESS": "شكرا لك على التقييم",
+    "ADD_COMMENT_SUCCESS": "تم التعليق بنجاح",
+    "DELETE_COMMENT_SUCCESS": "تم حذف التعليق بنجاح"
+  },
+  "PAYMENT": {
+    "title": "الدفع",
+    "subTitle": "يرجى اتباع التعليمات أدناه",
+    "enterData": "أدخل البيانات",
+    "dataValid": "البيانات صحيحة",
+    "completed": "مكتمل",
+    "tax": "الضرائب",
+    "subTotal": "المجموع الفرعي",
+    "total": "الإجمالي",
+    "transfer": "تحويل Pembayaran",
+    "bankCentralAsia": "بنك المركز الآسيوي",
+    "accountNumber": "2208 1996",
+    "buildWithAngga": "BuildWith Angga",
+    "bankMandiri": "بنك مانديري",
+    "SUCCESS_PAYMENT_TITLE": "تم بنجاح!",
+    "SUCCESS_PAYMENT_DESC_LINE_1": "سوف نؤكد عليك برسالة",
+    "SUCCESS_PAYMENT_DESC_LINE_2": "عندما تتم المعاملة"
+  },
+  "explore": {
+    "exploreALLRooms": "استكشف جميع الغرف",
+    "allRoom": "جميع الغرف"
+  }
+}

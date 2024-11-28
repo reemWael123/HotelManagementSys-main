@@ -1,0 +1,65 @@
+button {
+  border-radius: revert-layer !important;
+}
+
+.btn-main .p-button,
+.p-datepicker-trigger.p-button,
+.p-selectbutton .p-button.p-highlight {
+  background-color: var(--bg-secondary-color) !important;
+
+  &:hover {
+    background-color: var(--btn-hover) !important;
+    box-shadow: var(--btn-shadow) !important;
+  }
+}
+
+.btn-outline-main .p-button {
+  background-color: white !important;
+  border: 1px solid var(--bg-secondary-color) !important;
+  color: var(--bg-secondary-color) !important;
+
+  &:hover {
+    background-color: var(--bg-secondary-color) !important;
+    color: white !important;
+    box-shadow: var(--btn-shadow) !important;
+  }
+}
+
+.btn-danger.p-button,
+.p-button-danger.p-button {
+  background-color: var(--danger-bg) !important;
+  border: var(--danger-bg) !important;
+  color: white !important;
+}
+
+.p-button-success.p-button {
+  background-color: var(--success-bg) !important;
+}
+
+.p-button,
+.p-button.p-button-lg {
+  height: 45px !important;
+}
+
+.p-button.p-button-lg {
+  height: 50px !important;
+}
+
+.p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+  color: var(--yellow-color) !important;
+}
+
+.p-rating:not(.p-disabled):not(.p-readonly) .p-rating-item .p-rating-icon {
+  color: var(--yellow-color) !important;
+}
+
+.p-rating:not(.p-disabled):not(.p-readonly) .p-rating-item:hover .p-rating-icon {
+  color: var(--yellow-color) !important;
+}
+
+.p-button.p-button-secondary {
+  background-color: var(--bg-gray-color) !important;
+  border: var(--bg-gray-color) !important;
+  color: var(--gray-color) !important;
+  width: 250px;
+}

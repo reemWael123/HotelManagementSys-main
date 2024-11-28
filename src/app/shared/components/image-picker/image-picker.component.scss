@@ -1,0 +1,63 @@
+.image-picker ::ng-deep {
+  .p-fileupload-files {
+    display: none;
+  }
+
+  .p-fileupload {
+    border: 1px dashed var(--image-picker-border) !important;
+    text-align: center !important;
+    color: var(--image-picker-color) !important;
+  }
+
+  .p-fileupload .p-progressbar {
+    display: none;
+  }
+
+  .p-fileupload .p-fileupload-buttonbar,
+  .p-fileupload .p-fileupload-content {
+    background-color: var(--image-picker-bg) !important;
+    border: none !important;
+  }
+
+  .choose-button.p-fileupload-choose {
+    border: none;
+    background-color: transparent !important;
+    color: var(--image-picker-color) !important;
+
+    .p-button-icon::before {
+      font-size: 30px !important;
+    }
+  }
+
+  .uploaded-image-container .p-fileupload-content {
+    padding: 0rem 1rem 1rem;
+  }
+
+  .empty-image-container {
+    .choose-images {
+      color: var(--image-picker-secondary-color) !important;
+    }
+    .p-fileupload-content {
+      display: none;
+    }
+  }
+
+  .p-fileupload-choose {
+    .p-button-icon {
+      margin: 0;
+    }
+
+    .p-button-label {
+      display: none;
+    }
+  }
+
+  .delete-icon {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}

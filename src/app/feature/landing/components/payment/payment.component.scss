@@ -1,0 +1,35 @@
+.stable-text {
+  font-size: 16px;
+  /* Adjust the font size as needed */
+  color: #33333393;
+  /* Set text color */
+  line-height: 1.5;
+  /* Improve readability with line height */
+  margin: 0;
+  /* Reset margins for consistent spacing */
+  padding: 5px 0;
+  /* Add vertical padding */
+}
+
+.main-color {
+  color: #152C5B;
+
+}
+
+.card-box {
+  padding: 20px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+}
+
+.btn-main {
+  width: 250px !important;
+
+  ::ng-deep .p-button {
+    width: 100% !important;
+  }
+}
+
+.logo-bank{
+  height: fit-content;
+}

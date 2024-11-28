@@ -1,0 +1,95 @@
+<div class="container mt-5 w-75">
+  <p-steps
+    [model]="items"
+    [readonly]="true"
+    [activeIndex]="activeIndex"
+  ></p-steps>
+  <ng-container *ngIf="!isSuccessPayment; else successPayment">
+    <div class="tittel mt-5">
+      <h2 class="text-center main-color">{{ "PAYMENT.title" | translate }}</h2>
+      <p class="text-center stable-text">
+        {{ "PAYMENT.subTitle" | translate }}
+      </p>
+    </div>
+
+    <div class="row mt-5 gap-md-0 gap-4">
+      <div class="col-md-5 main-color">
+        <h5>{{ "PAYMENT.transfer" | translate }}</h5>
+        <h6>{{ "PAYMENT.tax" | translate }}: 10%</h6>
+        <h6>{{ "PAYMENT.subTotal" | translate }}: {{ price }}$</h6>
+        <h6>{{ "PAYMENT.total" | translate }}: {{ price * 0.1 }}$</h6>
+        <div class="d-flex gap-3 my-4">
+          <img
+            src="../../../../../assets/images/landing/bank.svg"
+            class="logo-bank"
+          />
+          <div>
+            <p class="mb-0 ternary-color">
+              {{ "PAYMENT.bankCentralAsia" | translate }}
+            </p>
+            <p class="mb-0 ternary-color">
+              {{ "PAYMENT.accountNumber" | translate }}
+            </p>
+            <p class="mb-0 ternary-color">
+              {{ "PAYMENT.buildWithAngga" | translate }}
+            </p>
+          </div>
+        </div>
+        <div class="d-flex gap-3">
+          <img
+            src="../../../../../assets/images/landing/logo_bank.svg"
+            class="logo-bank"
+          />
+          <div>
+            <p class="mb-0 ternary-color">
+              {{ "PAYMENT.bankMandiri" | translate }}
+            </p>
+            <p class="mb-0 ternary-color">
+              {{ "PAYMENT.accountNumber" | translate }}
+            </p>
+            <p class="mb-0 ternary-color">
+              {{ "PAYMENT.buildWithAngga" | translate }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 d-md-block d-none">
+        <p-divider layout="vertical"></p-divider>
+      </div>
+
+      <div class="col-md-5">
+        <div [formGroup]="checkoutForm" class="card-box">
+          <ngx-stripe-elements
+            #card
+            [stripe]="stripe"
+            [elementsOptions]="elementsOptions"
+          >
+            <ngx-stripe-card [options]="cardOptions" />
+          </ngx-stripe-elements>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-center align-items-center gap-2 flex-column mt-md-5 mt-0"
+      >
+        <p-button
+          *ngIf="isCardValid"
+          label="{{ 'BUTTONS.CONTINUE_BOOK' | translate }}"
+          class="btn-main"
+          type="submit"
+          (click)="createToken()"
+        ></p-button>
+        <p-button
+          label="{{ 'BUTTONS.CANCEL' | translate }}"
+          type="button"
+          severity="secondary"
+          routerLink="/landing"
+        ></p-button>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #successPayment>
+  <app-success-payment></app-success-payment>
+</ng-template>

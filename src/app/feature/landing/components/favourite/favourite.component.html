@@ -1,0 +1,33 @@
+<section>
+  <div class="container">
+    <div class="header text-center pt-5 pb-4 ternary-color">
+      <h1>{{ "FAVORITES.FAVORITES_LIST_TITLE" | translate }}</h1>
+    </div>
+    <div class="rooms">
+      <div class="row">
+        <app-landing-card
+          *ngFor="let room of roomsList"
+          class="col-md-4 mx-0 py-5"
+          [images]="room?.images"
+          [name]="room?.roomNumber"
+          [isFloatedFooter]="true"
+          [badgeTitle]="'$' + room?.price + ' ' + ('sub tittel' | translate)"
+          [type]="'room'"
+          [id]="room?._id"
+          [isFavorite]="false"
+          (removeFromFavorites)="getFavouriteRooms(0, rows)"
+        ></app-landing-card>
+      </div>
+    </div>
+
+    <div>
+      <p-paginator
+        (onPageChange)="onPageChange($event)"
+        [first]="first"
+        [rows]="rows"
+        [totalRecords]="totalPages"
+        [rowsPerPageOptions]="[6, 10, 15]"
+      ></p-paginator>
+    </div>
+  </div>
+</section>

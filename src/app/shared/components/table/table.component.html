@@ -1,0 +1,122 @@
+<p-table
+  *ngIf="data"
+  [scrollable]="true"
+  scrollDirection="horizontal"
+  [columns]="columns"
+  [value]="data"
+  [paginator]="paginator"
+  [rows]="rows"
+  [rowsPerPageOptions]="rowsPerPageOptions"
+  [showCurrentPageReport]="showCurrentPageReport"
+  [currentPageReportTemplate]="currentPageReportTemplate"
+  [totalRecords]="totalRecords"
+  [pageLinks]="pageLinks"
+  [styleClass]="styleClass"
+>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th
+        *ngFor="let column of columns"
+        pFrozenColumn
+        [frozen]="column.isFrozen"
+        [alignFrozen]="column.frozenDirection"
+      >
+        {{ column.header | titlecase }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td
+        *ngFor="let column of columns"
+        pFrozenColumn
+        [frozen]="column.isFrozen"
+        [alignFrozen]="column.frozenDirection"
+      >
+        <ng-container [ngSwitch]="column.type">
+          <span *ngSwitchCase="'text'">{{ rowData[column.field] }}</span>
+
+          <span *ngSwitchCase="'number'">{{
+            rowData[column.field] | number : "1.0-" + column.decimalPlaces
+          }}</span>
+
+          <span *ngSwitchCase="'object'">
+            <span *ngIf="rowData[column.field] && column.objectKey">
+              {{ rowData[column.field][column.objectKey] }}
+            </span>
+          </span>
+
+          <ng-container *ngSwitchCase="'images'">
+            <ng-container *ngIf="rowData[column.field].length; else noImages">
+              <p-avatarGroup
+                class="pointer"
+                (click)="openGallery(getColumnAvatars(rowData[column.field]))"
+              >
+                <p-avatar
+                  *ngFor="let avatar of getColumnAvatars(rowData[column.field])"
+                  [image]="avatar"
+                  size="large"
+                  shape="circle"
+                >
+                </p-avatar>
+              </p-avatarGroup>
+            </ng-container>
+            <ng-template #noImages>
+              <p-avatar
+                [image]="'../../../../assets/images/global/noImg.png'"
+                size="large"
+                shape="circle"
+              >
+              </p-avatar>
+            </ng-template>
+          </ng-container>
+
+          <span *ngSwitchCase="'date'"
+            >{{ rowData[column.field] | date : column.format }}
+          </span>
+
+          <span *ngSwitchCase="'list'">
+            <span *ngFor="let item of rowData[column.field]; let isLast = last"
+              >{{ item }}<span *ngIf="!isLast">,</span>
+            </span>
+          </span>
+
+          <span *ngSwitchCase="'actions'" class="actions">
+            <button
+              *ngIf="column.actions?.isView"
+              pButton
+              pRipple
+              icon="pi pi-eye"
+              class="p-button-rounded p-button-primary me-2"
+              (click)="onView(rowData)"
+            ></button>
+            <button
+              *ngIf="column.actions?.isEdit"
+              pButton
+              pRipple
+              icon="pi pi-pencil"
+              class="p-button-rounded p-button-success me-2"
+              (click)="onEdit(rowData)"
+            ></button>
+            <button
+              *ngIf="column.actions?.isDelete"
+              pButton
+              pRipple
+              icon="pi pi-trash"
+              class="p-button-rounded p-button-warning me-2"
+              (click)="onDelete(rowData)"
+            ></button>
+            <p-toast> </p-toast>
+          </span>
+        </ng-container>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<app-gallery
+  *ngIf="showGallery === true"
+  [images]="galleryImages"
+  [visible]="showGallery"
+  (exitEmitter)="exitGallery()"
+></app-gallery>

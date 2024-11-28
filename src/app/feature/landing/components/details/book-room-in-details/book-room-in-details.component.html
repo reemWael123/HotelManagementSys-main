@@ -1,0 +1,40 @@
+<div>
+  <h5 class="ternary-color">{{ "LANDING_PAGE.START_BOOKING" | translate }}</h5>
+
+  <p>
+    <span class="price">${{ room.price }}</span>
+    <span class="price-per-night">
+      {{ "ROOM_DETAILS_BOOKING.PER_NIGHT" | translate }}</span
+    >
+  </p>
+  <p class="discount">
+    {{ "ROOM_DETAILS_BOOKING.DISCOUNT" | translate }} {{ room.discount }}$
+  </p>
+</div>
+
+<form class="booking-form mt-3" #bookingForm="ngForm" (ngSubmit)="onSubmit()">
+  <label>{{ "LANDING_PAGE.PICK_DATE" | translate }}</label>
+  <p-calendar
+    dateFormat="d M yy"
+    [(ngModel)]="rangeDates"
+    selectionMode="range"
+    [readonlyInput]="true"
+    [showIcon]="true"
+    styleClass="w-100"
+    inputStyleClass="w-100"
+    name="rangeDates"
+    [minDate]="today"
+    [required]="true"
+  ></p-calendar>
+
+  <div class="btn-main">
+    <button
+      pButton
+      class="w-100 px-5 justify-content-center mt-3"
+      type="submit"
+      [disabled]="bookingForm.invalid"
+    >
+      {{ "BUTTONS.CONTINUE_BOOK" | translate }}
+    </button>
+  </div>
+</form>

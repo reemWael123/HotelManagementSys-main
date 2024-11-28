@@ -1,0 +1,15 @@
+<div class="row mx-0 my-5 g-3">
+  <div class="col-12">
+    <h5 class="ternary-color">{{"ads"|translate}}</h5>
+  </div>
+
+  <app-landing-card
+    class="col-md-3 mx-0 rounded-4"
+    *ngFor="let ad of adsList"
+    [badgeTitle]="'$' + ad.room?.price + ' ' + ('sub tittel' | translate)"
+    [images]="ad.room?.images"
+    [name]="ad.room?.roomNumber"
+    [isFloatedFooter]="true"
+    [id]="ad.room?._id"
+  ></app-landing-card>
+</div>

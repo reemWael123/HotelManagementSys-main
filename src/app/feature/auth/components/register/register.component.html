@@ -1,0 +1,216 @@
+<div class="row mx-0 auth">
+  <div class="col-lg-6">
+    <div class="logo">
+      <img
+        src="../../../../../assets/images/landing/Staycation.svg"
+        alt="logo"
+      />
+    </div>
+    <div class="auth-form p-3 d-flex flex-column gap-3">
+      <div class="auth-title">
+        <h2 class="mb-4">Sign Up</h2>
+        <p class="mb-0">If you already have an account register</p>
+        <p class="mb-0">
+          You can
+          <a routerLink="/auth/login" class="fw-bold">Login here !</a>
+        </p>
+      </div>
+
+      <app-profile-image-picker
+        (profileImageEmitter)="updateProfileImage($event)"
+      ></app-profile-image-picker>
+
+      <form
+        [formGroup]="registerForm"
+        class="d-flex flex-column gap-2 p-inputs-sm"
+      >
+        <div class="d-flex flex-column">
+          <label>User Name</label>
+          <span class="p-input-icon-right">
+            <i class="pi pi-user"></i>
+            <input
+              type="text"
+              pInputText
+              aria-describedby="username-help"
+              placeholder="Enter your username"
+              formControlName="userName"
+            />
+          </span>
+          <div
+            id="username-help"
+            *ngIf="
+              registerForm.controls.userName.touched &&
+              registerForm.controls.userName.errors
+            "
+            class="position-relative error-text"
+          >
+            <small *ngIf="registerForm.controls.userName.errors?.['required']"
+              >Username is required</small
+            >
+          </div>
+        </div>
+
+        <div class="d-flex flex-column">
+          <label>Email</label>
+          <span class="p-input-icon-right">
+            <i class="pi pi-envelope"></i>
+            <input
+              type="email"
+              pInputText
+              aria-describedby="email-help"
+              placeholder="Enter your email"
+              formControlName="email"
+            />
+          </span>
+          <div
+            id="email-help"
+            *ngIf="
+              registerForm.controls.email.touched &&
+              registerForm.controls.email.errors
+            "
+            class="position-relative error-text"
+          >
+            <small *ngIf="registerForm.controls.email.errors?.['required']"
+              >Email is required</small
+            >
+            <small *ngIf="registerForm.controls.email.errors?.['email']"
+              >Enter valid email</small
+            >
+          </div>
+        </div>
+
+        <div class="row mx-0">
+          <div class="col-md-6 ps-md-0 d-flex flex-column">
+            <label>Country</label>
+            <span class="p-input-icon-right">
+              <i class="pi pi-map-marker"></i>
+              <input
+                type="text"
+                pInputText
+                aria-describedby="country-help"
+                placeholder="Enter your country"
+                formControlName="country"
+              />
+            </span>
+            <div
+              id="country-help"
+              *ngIf="
+                registerForm.controls.country.touched &&
+                registerForm.controls.country.errors
+              "
+              class="position-relative error-text"
+            >
+              <small *ngIf="registerForm.controls.country.errors?.['required']"
+                >Country is required</small
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 pe-md-0 d-flex flex-column">
+            <label>Phone Number</label>
+            <span class="p-input-icon-right">
+              <i class="pi pi-mobile"></i>
+
+              <input
+                type="text"
+                pInputText
+                aria-describedby="phonenumber-help"
+                formControlName="phoneNumber"
+                placeholder="Enter your phone number"
+              />
+            </span>
+            <div
+              id="phonenumber-help"
+              *ngIf="
+                registerForm.controls.phoneNumber.touched &&
+                registerForm.controls.phoneNumber.errors
+              "
+              class="position-relative error-text"
+            >
+              <small
+                *ngIf="registerForm.controls.phoneNumber.errors?.['required']"
+                >Phone number is required</small
+              >
+              <small
+                *ngIf="registerForm.controls.phoneNumber.errors?.['pattern']"
+                >Phone number must start with 01 and be 11 digits
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mx-0">
+          <div class="col-md-6 ps-md-0 d-flex flex-column">
+            <label>Password</label>
+            <p-password
+              [toggleMask]="true"
+              formControlName="password"
+              aria-describedby="password-help"
+              placeholder="Enter new password"
+            >
+              <ng-template pTemplate="footer">
+                <app-password-hint-pop-over></app-password-hint-pop-over>
+              </ng-template>
+            </p-password>
+
+            <div
+              *ngIf="
+                registerForm.controls.password.touched &&
+                registerForm.controls.password.errors
+              "
+              id="password-help"
+              class="position-relative error-text"
+            >
+              <small *ngIf="registerForm.controls.password.errors?.['required']"
+                >Password is required
+              </small>
+            </div>
+          </div>
+
+          <div class="col-md-6 pe-md-0 d-flex flex-column">
+            <label>Confirm Password</label>
+            <p-password
+              [feedback]="false"
+              [toggleMask]="true"
+              aria-describedby="confirm-password-help"
+              placeholder="Enter confirm password"
+              formControlName="confirmPassword"
+            >
+            </p-password>
+
+            <div
+              *ngIf="
+                registerForm.controls.confirmPassword.touched &&
+                registerForm.controls.confirmPassword.errors
+              "
+              id="confirm-password-help"
+              class="position-relative error-text"
+            >
+              <small
+                *ngIf="registerForm.controls.confirmPassword.errors?.['required']"
+                >Confirm password is required</small
+              >
+              <small
+                *ngIf="registerForm.controls.confirmPassword.errors?.['notMatch']"
+                >Confirm password must match the password</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <p-button
+          label="Sign up"
+          [loading]="loading"
+          class="btn-main mt-2"
+          (click)="submit()"
+        ></p-button>
+      </form>
+    </div>
+  </div>
+  <div
+    class="col-lg-6 d-lg-flex d-none register-back p-5 flex-column justify-content-end"
+  >
+    <h2 class="main-color">Sign up to Roamhome</h2>
+    <p class="main-color">Homes as unique as you.</p>
+  </div>
+</div>

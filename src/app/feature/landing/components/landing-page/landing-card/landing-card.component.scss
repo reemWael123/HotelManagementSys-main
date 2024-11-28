@@ -1,0 +1,74 @@
+.landing-card {
+  position: relative !important;
+
+  &__badge {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    border-radius: 0 1rem;
+    color: white;
+    background-color: var(--card-badge);
+  }
+
+  &__footer {
+    font-family: Poppins;
+
+    &__name {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: 400;
+      display: block;
+      color: var(--ternary-color);
+      margin-top: 0.5rem;
+    }
+
+    &__location {
+      font-family: Poppins;
+      font-size: 15px;
+      font-weight: 300;
+      display: block;
+      color: var(--text-gray-color);
+    }
+
+    &-floated {
+      position: absolute !important;
+      bottom: 0;
+      z-index: 10;
+
+      .landing-card__footer__name,
+      .landing-card__footer__location {
+        color: white !important;
+        padding: 2px 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .inner {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .port-item img {
+    width: 100%;
+  }
+
+  .port-item .layer {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    border-radius: 16px;
+    transition: 0.3s;
+  }
+
+  .port-item:hover .layer {
+    opacity: 1;
+  }
+}

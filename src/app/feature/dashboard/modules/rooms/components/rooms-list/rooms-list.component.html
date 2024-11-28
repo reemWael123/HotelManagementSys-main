@@ -1,0 +1,16 @@
+<app-table-header
+  title="Rooms"
+  buttonText="Add New Room"
+  (addEmitter)="addRoom()"
+></app-table-header>
+
+<app-table
+  [columns]="columns"
+  [data]="roomsList"
+  [paginator]="paginator"
+  [totalRecords]="totalRecords"
+  [footerKey]="footerKey"
+  (viewEmitter)="onView($event)"
+  (editEmitter)="onEdit($event)"
+  (deleteEmitter)="onDelete($event)"
+></app-table>
